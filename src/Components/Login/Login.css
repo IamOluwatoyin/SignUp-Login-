@@ -1,0 +1,40 @@
+.input-wrapper{
+width: 100%;
+height: 100vh;
+background-image: url(https://t3.ftcdn.net/jpg/06/74/64/08/240_F_674640849_yudZp8yXIMXGsC8NRgi0Bo7DibU4aMDq.jpg);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.input-holder{
+  width: 30%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid blue;
+}
+.input-style{
+  width: 95%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: lightcyan;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  
+}
+.input-wrap{
+  width: 95%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: lightcyan;
+  
+}
+
+.button{
+  padding: 15px;
+  cursor: pointer;
+}
