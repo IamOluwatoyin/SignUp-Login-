@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./SignUP.css";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { NavLink, useNavigate } from "react-router-dom";
 const SignUp = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -20,6 +21,11 @@ const SignUp = () => {
       confirmPassword
     );
   };
+
+  const navigate = useNavigate()
+  const handleSignUp =() =>{
+    navigate("/home")
+  }
   return (
     <div className="input-wrapper">
       <div className="input-holder">
@@ -38,12 +44,12 @@ const SignUp = () => {
           className="input-style"
         />
 
-        <input
+        {/* <input
           type="text"
           placeholder="Enter your user name"
           onChange={(e) => setUserName(e.target.value)}
           className="input-style"
-        />
+        /> */}
 
         <input
           type="text"
@@ -79,9 +85,14 @@ const SignUp = () => {
             <FaRegEyeSlash onClick={() => setConfirm(!showConfirm)} />
           )}
         </div>
-        <button onClick={handlick} className="button">
+        <button onClick={handleSignUp} className="button">
           Sign Up
         </button>
+        <span>
+          I already have an account
+           
+          </span>
+          <NavLink to={"/login"}>Login</NavLink>       
       </div>
     </div>
   );

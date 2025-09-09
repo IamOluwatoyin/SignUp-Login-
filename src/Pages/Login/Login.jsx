@@ -1,6 +1,7 @@
 import {useState} from "react";
 import "./Login.css"
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { NavLink, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
@@ -8,19 +9,27 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  
   const loginPassword = () =>{
     console.log(userName, email, password)
+  }
+  const navigate = useNavigate()
+  const handleLogin =() =>{
+    navigate("/home")
+  }
+    const handlePassword =() =>{
+    navigate("/span")
   }
 
   return (
     <div className="input-wrapper">
-      <div className="input-holder">
-        <input
+      <div className="input-holder2">
+        {/* <input
           type="text"
           placeholder="Enter your user name"
           onChange={(e) => setUserName(e.target.value)}
           className="input-style"
-        />
+        /> */}
 
         <input
           type="text"
@@ -42,9 +51,19 @@ const Login = () => {
             <FaRegEyeSlash onClick={() => setShowPassword(!showPassword)} />
           )}
         </div>
-        <button onClick={loginPassword} className="button">
+        <button 
+        // onClick={loginPassword} 
+        onClick={handleLogin}
+        
+        className="button">
           Login
         </button>
+        <span style={{cursor:"pointer"}}>
+            <NavLink to={"/forget-password?"}>Forget Password?</NavLink>
+         </span>
+
+        <p>Don't have an account?</p>
+        <NavLink to={"/signUp"}>Sign Up</NavLink>
       </div>
     </div>
   );
