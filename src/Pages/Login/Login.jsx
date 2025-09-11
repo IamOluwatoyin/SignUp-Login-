@@ -5,14 +5,27 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
-  const [userName, setUserName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [userName, setUserName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [login, setLogin] = useState({
+    userName: "",
+     email: "", 
+     password: ""
+  })
   
-  const loginPassword = () =>{
-    console.log(userName, email, password)
+  // const loginPassword = () =>{
+  //   console.log(userName, email, password)
+  // }
+  const handleClick = ()=>{
+    setLogin({
+       userName: "",
+     email: "", 
+     password: ""
+    })
   }
+  console.log(login)
   const navigate = useNavigate()
   const handleLogin =() =>{
     navigate("/home")
@@ -22,28 +35,39 @@ const Login = () => {
   }
 
   return (
-    <div className="input-wrapper">
+    <div className="input-wrapper2">
+     
+      <div className="side-bar2">
+          <h1>Welcome Back!</h1>
+          <button className="btn2">Login</button>
+        </div>
+      
       <div className="input-holder2">
-        {/* <input
+         <h1>Login Form</h1>
+        
+        <input
           type="text"
           placeholder="Enter your user name"
-          onChange={(e) => setUserName(e.target.value)}
+          // onChange={(e) => setUserName(e.target.value)}
+          onChange={(e) => setLogin({...login,userName:e.target.value})}
           className="input-style"
-        /> */}
+          
+        />
 
         <input
           type="text"
           placeholder="Enter your email"
           className="input-style"
-          onChange={(e) => setEmail(e.target.value)}
+          // onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setLogin({...login,email:e.target.value})}
         />
 
-        <div className="input-wrap">
+        <div className="input-wrap-login">
           <input
             type={showPassword ? "text" : "password"}
             placeholder="enter your password"
-            onChange={(e) => setPassword(e.target.value)}
-            className="input-style"
+            onChange={(e) => setLogin({...login,password:e.target.value})}
+            className="input-style-login"
           />
           {showPassword ? (
             <FaRegEye onClick={() => setShowPassword(!showPassword)} />
@@ -55,7 +79,7 @@ const Login = () => {
         // onClick={loginPassword} 
         onClick={handleLogin}
         
-        className="button">
+        className="button2">
           Login
         </button>
         <span style={{cursor:"pointer"}}>

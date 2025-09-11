@@ -1,45 +1,96 @@
 .input-wrapper{
   width: 100%;
   height: 100vh;
-  background-image: url(https://t3.ftcdn.net/jpg/06/74/64/08/240_F_674640849_yudZp8yXIMXGsC8NRgi0Bo7DibU4aMDq.jpg);
-  
+  background:white;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.input-side{
+width: 30%;
+height: 50%;
+background-color: darkgreen;
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+&& h1{
+  color: white;
+}
+}
+
+.btn{
+width: 25%;
+height: 10%;
+padding: 10px;
+border-radius: 3px;
+cursor: pointer;
+border: 2px solid darkgreen;
+}
 
 .input-holder{
    width: 50%;
-  height: 90%;
+  height: 60%;
   /* background-color: ; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  border: 1px solid blue;
+  border: 3px solid darkgreen;
+  padding: 10px;
   
 }
 
 .input-style{
-  width: 95%;
-  height: 50px;
+  width: 45%;
+  height: 70px;
   border-radius: 10px;
-  background-color: lightcyan;
+  background-color: whitesmoke;
   outline: none;
   border: none;
   cursor: pointer;
+  padding-left: 10px;
   
 }
 .input-wrap{
-  width: 95%;
-  height: 50px;
+  width: 40%;
+  height: 70px;
   border-radius: 10px;
-  background-color: lightcyan;
+  background-color: whitesmoke;
+  
   
 }
-
-.button{
-  padding: 15px;
+.input-wrap-signup{
+  width: 45%;
+  height: 70px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  
+  
+}
+.input-style-signup{
+  width: 90%;
+  height: 50px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  outline: none;
+  border: none;
   cursor: pointer;
+  margin-left: 10px;
+  
+  
+}
+.button{
+  width: 45%;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid darkgreen;
+}
+.acount-signup  {
+  text-decoration: none;
+  
 }

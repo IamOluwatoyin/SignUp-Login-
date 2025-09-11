@@ -12,12 +12,15 @@ const Home = () => {
         alignItems: "center",
         justifyContent: "center",
       }}
-      >
+      >   
         
            Welcome to Torera's World
-       
-      
+{/* 
+           <button>
+            Login
+           </button> */}
     </div>
+    
   )
 }
 
